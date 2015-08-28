@@ -1,0 +1,20 @@
+#Asking the name of the user
+name = input("Hey, I am a temperature converter robot, what is your name?")
+print ("hi there "+ name + ".")
+
+#Asking the temperature in Fahrenheit / We use a float to accept decimals
+Fahrenheit = float(input(name + " could you give me a temperature in Fahrenheit: "))
+
+#Formula to convert the temperature
+Celsius = (Fahrenheit - 32) * 5.0/9.0
+#Formula to get 2 decimals
+Celsius = "%.2f" % Celsius
+
+#Response to the user
+print ("For ", Fahrenheit, "Fahrenheit degrees, the equivalent will be", Celsius, "in Celsius degrees")
+
+#Alternative response possible
+if Fahrenheit < 212:
+    print ("Water does not boil at this temperature (under typical conditions)")
+else:
+    print ("Water boil at this temperature (under typical conditions)")
