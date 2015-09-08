@@ -15,7 +15,7 @@ while number != numbercompu :
     if (number > numbercompu) :
         print ("I’m sorry but my number is lower")
         number = int(input("Try again please: "))
-    if (number < numbercompu) :
+    elif (number < numbercompu) :
         print ("I’m sorry but my number is higher")
         number = int(input("Try again please: "))
 #When the response is good
