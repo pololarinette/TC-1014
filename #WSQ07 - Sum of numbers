@@ -1,0 +1,15 @@
+print ("Hey, I am Paul Lemarié's program'")
+print ("Let's play now !")
+
+print ("This program is going to calculate the sum of integers in to the range that you provide")
+
+lower = int(input("Give me the lower bound : "))
+upper = int(input("Give me the upper bound : "))
+
+if int(lower) > int(upper) :
+    print("No valid integer! Please try again ...")
+elif (int(lower) == int(upper)) :
+    print("Give different numbers. Please try again ...")
+else :
+    print ("The sum of your values is: ", sum(range(lower,upper + 1)))
+    print ("Now you can relax my friend")
