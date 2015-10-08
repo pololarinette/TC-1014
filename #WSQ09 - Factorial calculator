@@ -1,0 +1,21 @@
+#DEFINE THE FACTORIAL
+def factorial (n):
+    x = n
+    y = 1
+#WHEN THE GIVEN NUMBER IS POSITIVE
+    while (x > 1):
+        y = y * x
+        x = x -1
+    return y
+a = "y"
+#START OF THE LOOP
+while (a == "y"):
+    n = int(input("Type a positive integer"))
+    f = factorial(n)
+
+#DIFFERENT RESPONSES IF IT IS WRONG OR NOT
+    if (n < 0):
+        print("it must be positive")
+    else:
+        print("The factorial of", n, "is", f)
+        a = input("Try again? y/n")
