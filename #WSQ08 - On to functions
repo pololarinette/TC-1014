@@ -1,0 +1,17 @@
+x = int(input("write the first number"))
+y = int(input("write the second number"))
+def calc1 (a,b):
+    return a + b
+def calc2 (a,b):
+    return a - b
+def calc3 (a,b):
+    return a * b
+def calc4 (a,b):
+    return a / b
+def calc5 (a,b):
+    return a%b
+print ("the sum of", x," and ",y, "is ",calc1(x,y))
+print (x," minus ",y, " is ",calc2(x,y))
+print ("the product of ",x," and ",y," is ",calc3(x,y))
+print ("the division of ",x," and ",y," is ",calc4(x,y))
+print ("The remainder of ",x," and ",y," is ",calc5(x,y))
