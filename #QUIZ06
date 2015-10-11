@@ -1,0 +1,25 @@
+print("Paul Lemarié - A01672534")
+
+#EXERCICE 1 - superpower
+x = int(input("Give me an integer number"))
+y = int(input("Give me a power please my friend"))
+
+def superpower(a,b):
+    count = 0
+    answer = 1
+    while (count < b):
+        answer = answer * a
+        count += 1
+    return answer
+
+print (superpower(x,y))
+
+#EXERCICE 2 - STARS
+def stars(e):
+    ans = ("")
+    for w in range(0,e):
+        ans = ans +("*")
+    print (ans)
+
+z = int(input("Write the number of stars you want: "))
+stars(z)
