@@ -1,0 +1,24 @@
+#Asking numbers
+a = float(input("give me the first number"))
+b = float(input("give me the second number"))
+c = float(input("give me the third number"))
+d = float(input("give me the fourth number"))
+e = float(input("give me the fifth number"))
+f = float(input("give me the sixth number"))
+g = float(input("give me the seventh number"))
+h = float(input("give me the eighth number"))
+i = float(input("give me the nineth number"))
+j = float(input("give me the last number"))
+
+#Showing the list
+list1 = [a,b,c,d,e,f,g,h,i,j]
+print("Your list is represented by these numbers ", list1)
+
+#Average of the list
+average1 = sum(list1)/len(list1)
+print("the average of your numbers is ", average1)
+
+#Standard Deviation
+import statistics
+statistics.stdev(list1)
+print ("The standard deviation of your numbers is ",statistics.stdev(list1))
