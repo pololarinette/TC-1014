@@ -1,0 +1,121 @@
+#PROGRAM #1
+    #Function saying that we have to print from x to y
+    #Each time
+def loop1(lower,upper):
+    for x in range(lower,upper+1):
+        print(x)
+
+#Asking input for the 2 numbers
+lower = int(input("Give me the lower value"))
+upper = int(input("Give me value greater or equal to " + str(lower) + ": "))
+
+#Condition to fill in
+while upper < lower :
+    print("please enter a higher value for the higher number")
+    upper = int(input("Give me value greater or equal to " + str(lower) + ": "))
+
+#Activating the loop
+loop1(lower,upper)
+
+#PROGRAM #2
+#multiply the two numbers by repeated addition
+def loop2(lower,upper):
+    sum = 0
+    for i in range(lower):
+        sum = sum + upper
+    return sum
+
+lower = int(input("Give me the lower value"))
+upper = int(input("Give me value greater or equal to " + str(lower) + ": "))
+
+while upper < lower :
+    print("please enter a higher value for the higher number")
+    upper = int(input("Give me value greater or equal to " + str(lower) + ": "))
+
+z = loop2(lower,upper)
+print("the product of ", lower," and", upper," is", z)
+
+#PROGRAM #3
+    #Table de multiplication de 0 à 12
+def loop3(lower,upper):
+    lower = 0
+    upper = 12
+    print ("time table for", table1)
+    for num in range(lower,upper+1):
+        print(num, "x", table1, "=", num*table1)
+
+table1 = int(input("Give me the table you want"))
+
+loop3(lower,upper)
+
+#PROGRAM #4
+    # Table multiplication from two values
+def loop4(low,up):
+    print ("time table for", table1)
+    for num in range(low,up+1):
+        print(num, "x", table1, "=", num*table1)
+
+table1 = int(input("Give me the table you want"))
+
+low = int(input("Enter the starting value:"))
+up = int(input("Enter the ending value:"))
+
+loop4(low,up)
+
+#Program #5
+    #Table de multiplication mais avec 2 solution
+    #soit comme avant dans l'ordre croissant soit dans l'ordre décroissant
+def loop5(table1, start,end):
+    if(start <= end):
+        print ("time table for", table1,"(going up)")
+        for num in range(start,end+1,1):
+            print(num, "x", table1, "=", num*table1)
+    else:
+        print ("time table for", table1, "(going down)")
+        for num in range(start,end-1,-1):
+            print(num, "x", table1, "=", num*table1)
+
+table1 = int(input("Give me the table you want"))
+
+start = int(input("Enter the starting value:"))
+end = int(input("Enter the ending value:"))
+
+loop5(table1,start,end)
+
+#Program #6
+    #Finding the best diviser for the function
+def gcd(a,b):
+    if a == b:
+        return a # or b since the same
+    elif a > b:
+        return gcd(a-b,b)
+    else:
+        return gcd(a,b-a)
+
+low = int(input("enter the smaller value "))
+high = int(input("enter a value greater than or equal to " + str(low) + ": "))
+
+while high < low:
+    print()
+    print("please enter a higher value for the larger number")
+    high = int(input("enter a value greater than or equal to " + str(low) + ": "))
+
+z = gcd(low,high)
+print("The GCD of", low, "and", high, "is", z)
+
+#Program #7
+    #Calculating Square root's Newton calculation
+def square_root(number,accuracy):
+    guess = 1.0
+    diff = 1000
+    while (diff > accuracy):
+        candidate = (guess + number/guess)/2.0
+        diff = abs(candidate - guess)
+        guess = candidate
+    return candidate
+
+number = float(input("Enter the number to calculate the square roor of: "))
+accuracy = float(input("Enter the accuracy value: "))
+
+z = square_root(number,accuracy)
+print("the square root of", number , "to accuracy of", accuracy, "is", z)
