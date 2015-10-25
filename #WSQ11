@@ -1,0 +1,50 @@
+#Defining the function Palindrome to calculate Lychrel number
+def func_palindrome(i):
+	i = str(i)
+	i = i[::-1]
+	i = int(i)
+	return i
+
+#Asking the 2 bounds
+lower = int(input("Give me the Lower Bound: "))
+upper = int(input("Give me the Upper Bound: "))
+
+#Defining each function and the list to 0 to simplify the line writing
+x=[]
+palindromes = 0
+nonlychrel = 0
+lychcandidate = 0
+lychrel = 0
+
+#Starting the filtering of each value with a loop
+for h in range(upper-lower+1):
+	x.append(lychrel)
+	lychrel = lychrel + 1
+if(upper<lower):
+	print("The values are incorect.")
+else:
+	for i in x:
+		i = i + 1
+		x = func_palindrome(i)
+		if (x == i):
+			palindromes = palindromes + 1
+		else:
+			non1 = x + i
+			non2 = func_palindrome(non1)
+			for z in range(30):
+				if non1 == non2:
+					nonlychrel=nonlychrel+1
+					break
+				else:
+					non1=non1+non2
+					non2=func_palindrome(non1)
+				if(z==29):
+					lychcandidate=lychcandidate+1
+
+
+print("Calculating wether each value is one of: palindrome, non-lychrel or lychrel candidate.")
+print("")
+print("And the results are for the range ",lower,"to",upper,".")
+print("Palindromes : ",palindromes)
+print("Non-Lychrel : ",nonlychrel)
+print("Lychrel candidates : ",lychcandidate)
