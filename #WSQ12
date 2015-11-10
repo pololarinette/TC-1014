@@ -1,0 +1,19 @@
+ #Finding the best diviser for the function
+def gcd(a,b):
+    if a == b:
+        return a # or b since the same
+    elif a > b:
+        return gcd(a-b,b)
+    else:
+        return gcd(a,b-a)
+
+low = int(input("enter the smaller value "))
+high = int(input("enter a value greater than or equal to " + str(low) + ": "))
+
+while high < low:
+    print()
+    print("please enter a higher value for the larger number")
+    high = int(input("enter a value greater than or equal to " + str(low) + ": "))
+
+z = gcd(low,high)
+print("The GCD of", low, "and", high, "is", z)
