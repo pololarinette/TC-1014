@@ -1,0 +1,12 @@
+ #Calculating Square root's Babylonian method calculation
+def function1(num1):
+    lastguess = -1
+    guess = 1
+    while abs(guess-lastguess) > 1:
+        lastguess = guess
+        guess = (guess + num1/guess) / 2
+    return guess
+
+num1 = int(input("Enter the number to calculate the square root of: "))
+
+print(function1(num1))
